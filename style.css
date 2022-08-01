@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+html {
+  background-color: darksalmon;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+#menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.acciones {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.usuarios {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.acciones {
+  display: flex;
+  justify-content: flex-end;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+#nuevo-usuario {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+
+#input-nombre {
+  padding: 8px;
+  width: 80%;
+}
+
+#input-usuario {
+  padding: 8px;
+  width: 80%;
+}
+
+#input-email{
+  padding: 8px;
+  width: 80%;
+}
+
+#input-password {
+  padding: 8px;
+  width: 80%;
+  text-align: justify;
+}
+
+#input-repetir-password {
+  padding: 8px;
+  width: 80%;
+}
+
+#foto {
+  padding: 8px;
+  width: 80%;
+}
+
+.contenedor-form {
+  display: flex;
+  justify-content: center;
+}
+
+#nombre {
+  padding: 8px;
+  width: 80%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  background-color: blanchedalmond;
+  font-size: 18px;
+  line-height: 2em;
+  border-radius: 4px;
+  width: 80%;
+}
+
+.contenido {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+button {
+  width: 10em;
+  padding: 0.5em;
+  background-color: lightseagreen;
+  border-radius: 4px;
+  border: 3px solid #a09f9f;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 1.2em;
+  margin: 1em;
+  font-size: 1em;
+  justify-content: center;
+}
+
+.favorito {
+  background-color: gold;
+  font-size: 1.15em;
+}
+
+.container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.titulo-resultado {
+  text-align: center;
+  display: block;
+}
+
+.ADOPTADO {
+  display: none;
+}
+
+.container-perros {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  height: 700px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-color: #fff;
+  margin: 10px 10px;
+}
+
+.img-card {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.title-card {
+  font-size: 40px;
+  margin: 5px;
+}
+
+.genero-card {
+  font-size: 20px;
+  color: #545454;
+}
+
+.tamaño-card {
+  font-size: 20px;
+  color: #545454;
+}
+
+.castrado-card {
+  font-size: 20px;
+  color: #545454;
+}

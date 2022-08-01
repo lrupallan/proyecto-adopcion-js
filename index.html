@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <html>
+      <nav id="menu">
+        <div id="bienvenido">
+          <p id="saludo"></p>
+        </div>
+        <div class="acciones">
+          <button class="cargar-nuevo-perro" id="nuevo-perro">
+            <a href="ingresar-perro.html">Cargar perro</a>
+          </button>
+          <button id="boton-logout">Cerrar sesión</button>
+        </div>
+      </nav>
+      <div class="usuarios">
+        <button class="login" id="boton-login">
+          <a href="./usuarios.html?f=ingresar">Iniciar sesión</a>
+        </button>
+        <button class="signup" id="boton-signup">
+          <a href="./usuarios.html?f=registrar">Registrarse</a>
+        </button>
+      </div>
+      
+      <div class="contenedor-form">
+        <form id="form-bucar-perros">
+          <h2>
+            BIENVENIDO A LA BASE DE DATOS DE PERROS EN
+            ADOPCION&#128062;&#127968;
+          </h2>
+          <p>
+            Elija en el siguiente formulario las caracteristicas que busca para
+            su mascota:
+          </p>
+          <ul class="contenido">
+            <li>
+              <label for="genero"><b>Genero:</b></label>
+              <div>
+                <input
+                  type="radio"
+                  id="radio-genero-cualquiera"
+                  name="genero"
+                  value=""
+                  checked="checked"
+                />
+                <label for="radio-genero-cualquiera">Cualquiera</label>
+                <input type="radio" id="radio-macho" name="genero" value="M" />
+                <label for="radio-macho">Macho</label>
+                <input type="radio" id="radio-hembra" name="genero" value="H" />
+                <label for="radio-hembra">Hembra</label>
+                <br />
+              </div>
+            </li>
+            <li>
+              <label for="genero"><b>Tamaño:</b></label>
+              <div>
+                <input
+                  type="radio"
+                  id="radio-tamaño-cualquiera"
+                  name="tamaño"
+                  value=""
+                  checked="checked"
+                />
+                <label for="radio-tamaño-cualquiera">Cualquiera</label>
+                <input type="radio" id="radio-chico" name="tamaño" value="C" />
+                <label for="radio-chico">Chico</label>
+                <input
+                  type="radio"
+                  id="radio-mediano"
+                  name="tamaño"
+                  value="M"
+                />
+                <label for="radio-mediano">Mediano</label>
+                <input type="radio" id="radio-grande" name="tamaño" value="G" />
+                <label for="radio-grande">Grande</label>
+                <br />
+              </div>
+            </li>
+            <li>
+              <label for="castrado"><b>Castrado:</b></label>
+              <div>
+                <input
+                  type="radio"
+                  id="radio-castrado-cualquiera"
+                  name="castrado"
+                  value=""
+                  checked="checked"
+                />
+                <label for="radio-castrado-cualquiera">Cualquiera</label>
+                <input
+                  type="radio"
+                  id="radio-castrado"
+                  name="castrado"
+                  value="S"
+                />
+                <label for="radio-castrado">Si</label>
+                <input
+                  type="radio"
+                  id="radio-no-castrado"
+                  name="castrado"
+                  value="N"
+                />
+                <label for="radio-no-castrado">No</label>
+                <br />
+              </div>
+            </li>
+          </ul>
+          <button class="button" type="submit" id="boton-buscar-perros">
+            Buscar
+          </button>
+          <button class="button" id="boton-mostrar-favoritos">
+            Ver mis perros favoritos
+          </button>
+        </form>
+      </div>
+
+      <div id="resultado-perros" class="container"></div>
+    </html>
+
+    <script src="./perros-adopcion.js"></script>
+    <script src="./menu.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>

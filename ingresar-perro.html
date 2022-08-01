@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <nav id="menu">
+    <div id="bienvenido">
+      <p id="saludo"></p>
+    </div>
+    <button id="boton-logout">Cerrar sesión</button>
+  </nav>
+
+  <div class="contenedor-form">
+    <form id="form-ingresar-perro">
+      <h2>CARGAR NUEVO PERRO&#128062;&#127968;</h2>
+      <P>Carga en el siguiente formulario los datos del animal para ayudarle a conseguir un hogar:</P>
+      <ul class="contenido">
+        <li>
+          <label for="nombre"><b>Nombre:</b></label>
+          <div>
+            <input type="text" id="nombre" name="nombre" required minlength="2" maxlength="50">
+            <br>
+          </div>
+        </li>
+        <li>
+          <label for="genero"><b>Genero:</b></label>
+          <div>
+            <input type="radio" id="radio-macho" name="genero" required="required" value="M">
+            <label for="radio-macho">Macho</label>
+            <input type="radio" id="radio-hembra" name="genero" required="required" value="H">
+            <label for="radio-hembra">Hembra</label>
+            <br>
+          </div>
+        </li>
+        <li>
+          <label for="genero"><b>Tamaño:</b></label>
+          <div>
+            <input type="radio" id="radio-chico" name="talla" required="required" value="C">
+            <label for="radio-chico">Chico</label>
+            <input type="radio" id="radio-mediano" name="talla" required="required"value="M">
+            <label for="radio-mediano">Mediano</label>
+            <input type="radio" id="radio-grande" name="talla" required="required"value="G">
+            <label for="radio-grande">Grande</label>
+            <br>
+          </div>
+        </li>
+        <li>
+          <label for="castrado"><b>Castrado:</b></label>
+          <div>
+            <input type="radio" id="radio-castrado" name="castrado" required="required" value='true'>
+            <label for="radio-castrado">Si</label>
+            <input type="radio" id="radio-no-castrado" name="castrado" required="required" value='false'>
+            <label for="radio-no-castrado">No</label>
+            <br>
+          </div>
+        </li>
+        <li>
+          <label for="nombre"><b>Por ultimo, dejanos su mejor foto (direccion url):</b></label>
+          <div>
+            <input type="text" id="foto" name="foto" required>
+            <br>
+          </div>
+        </li>
+      </ul>
+      <button class="button" type="submit" id="boton-ingresar-perro">CARGAR</button>
+  </div>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./menu.js"></script>
+  <script src="ingresar-perro.js"></script>
+
+</body>
+</html>
