@@ -12,38 +12,39 @@
   <div class="contenedor-form">
     <form id="form-nuevo-usuario">
       <h2 id="titulo">BIENVENIDO!&#128062;&#127968;</h2>
-      <P id="mensaje-bienvenida">Para registrarte ingresá tus datos en el siguiente formulario:</P>
+      <P id="mensaje-bienvenida">Para registrarte ingresá tus datos en el siguiente formulario: <br>
+      ¿Ya tenés cuenta? <a href="./usuarios.html?f=ingresar"><b>INGRESÁ</b></a></P>
       <ul class="contenido">
         <li>
           <div>
             <label id="label-nombre" for="nombre"><b>Nombre y apellido:</b></label>
-            <input type="text" id="input-nombre" name="nombre" required minlength="7" maxlength="50">
+            <input type="text" id="input-nombre" name="nombre" pattern="^[a-zA-Z\s]*$" required minlength="6" maxlength="50" title="Solo letras.">
             <br>
           </div>
         </li>
         <li>
           <div>
             <label id="label-usuario"for="nombre"><b>Nombre de usuario:</b></label>
-            <input type="text" id="input-usuario" name="usuario" required minlength="4" maxlength="20">
+            <input type="text" id="input-usuario" name="usuario" pattern="^[A-Za-z0-9]*$" required minlength="4" maxlength="20" title="Solo letras y números.">
             <br>
           </div>
         </li>
         <li>
           <div>
             <label id="label-email" for="email"><b>Correo electrónico:</b></label>
-            <input type="email" id="input-email" name="email" required="required"> 
+            <input type="email" id="input-email" pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$" name="email" required="required" title="Debe contener '@', sin espacios."> 
           </div>
         </li>
         <li>
           <div>
             <label id="label-password" for="password"><b>Contraseña:</b> <br>(al menos 6 caracteres, letras y números)</label>
-            <input type="password" id="input-password" name="password" required="required" minlength="6">
+            <input type="password" id="input-password" pattern="^[A-Za-z0-9]*$" name="password" required="required" minlength="6" title="Solo letras y números.">
           </div>
         </li>
         <li>
           <div>
             <label id="label-repetir-password"for="repetir-password"><b>Repetir contraseña:</b></label>
-            <input type="password" id="input-repetir-password" name="repetir-password" required="required">
+            <input type="password" id="input-repetir-password" pattern="^[A-Za-z0-9]*$" name="repetir-password" minlength="6" required="required" title="Solo letras y números.">
           </div>
         </li>
       </ul>

@@ -25,8 +25,9 @@ if (isLogin) {
   botonRegistro.innerHTML = `INGRESAR`;
   //cambiar mensaje de bienvenida
   document.getElementById("titulo").innerHTML = "BIENVENIDO OTRA VEZ&#128075;";
-  document.getElementById("mensaje-bienvenida").innerHTML =
-    "Para iniciar sesión ingresá tu usuario y contraseña";
+  document.getElementById(
+    "mensaje-bienvenida"
+  ).innerHTML = `Para iniciar sesión ingresá tu usuario y contraseña <br> ¿No tenés cuenta? <a href="./usuarios.html?f=registrar"><b>REGISTRATE</b></a>`;
 }
 
 async function signupHandler(event) {
@@ -36,12 +37,24 @@ async function signupHandler(event) {
     return await ingresarUsuario(elemUsuario.value, elemPassword.value);
   }
 
-  return await cargarUsuario(
-    elemNombreyapellido.value,
-    elemUsuario.value,
-    elemEmail.value,
-    elemPassword.value
+  const isValid = validarCargarUsuario(
+    elemNombreyapellido,
+    elemUsuario,
+    elemEmail,
+    elemPassword,
+    elemRepetirPassword
   );
+
+  if (isValid) {
+    return await cargarUsuario(
+      elemNombreyapellido.value,
+      elemUsuario.value,
+      elemEmail.value,
+      elemPassword.value
+    );
+  } else {
+    alert("Alguno de los campos no fue completado de manera correcta.");
+  }
 }
 
 async function ingresarUsuario(username, password) {
@@ -79,6 +92,22 @@ async function ingresarUsuario(username, password) {
   } else {
     alert("Error inesperado, vuelva a intentar en unos momentos");
   }
+}
+
+function validarCargarUsuario(
+  elemFullname,
+  elemUsername,
+  elemEmail,
+  elemPassword,
+  elemRepetirPassword
+) {
+  return (
+    elemFullname.validity.valid &&
+    elemUsername.validity.valid &&
+    elemEmail.validity.valid &&
+    elemPassword.validity.valid &&
+    elemPassword.value === elemRepetirPassword.value
+  );
 }
 
 async function cargarUsuario(fullname, username, email, password) {
