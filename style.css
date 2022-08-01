@@ -130,6 +130,12 @@ button {
   display: none;
 }
 
+.estado-adoptado {
+  font-size: 20px;
+  background-color: lightsalmon;
+  padding: 0.7em;
+}
+
 .container-perros {
   display: flex;
   flex-wrap: wrap;

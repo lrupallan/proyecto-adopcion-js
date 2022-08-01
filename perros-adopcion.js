@@ -115,7 +115,7 @@ async function filtrarPerros(event) {
         }
       }
       if (perro.adoptante) {
-        card += "<p>Adoptado&#127881;</p>";
+        card += "<p class='estado-adoptado'>Adoptado&#127881;</p>";
       }
 
       div.innerHTML = card;
