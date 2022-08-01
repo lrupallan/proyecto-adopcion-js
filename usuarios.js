@@ -65,22 +65,20 @@ async function ingresarUsuario(username, password) {
     sessionStorage.setItem("user-info", JSON.stringify(body));
     sessionStorage.setItem("favoritos", JSON.stringify(body.perrosFavoritos));
 
-      Swal.fire({
-        position: 'top-end',
-        icon: 'success',
-        title: 'Iniciaste sesion de manera exitosa',
-        showConfirmButton: false,
-        timer: 3000
-      }).then(
-        (result) => {
-          if(result) {
-            window.location.href = 'index.html'
-          }
-        }
-      )
-
-      window.location.href = 'index.html'
-  } else {alert("Error inesperado, vuelva a intentar en unos momentos")}
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Iniciaste sesion de manera exitosa",
+      showConfirmButton: false,
+      timer: 1500,
+    }).then((result) => {
+      if (result) {
+        window.location.href = "index.html";
+      }
+    });
+  } else {
+    alert("Error inesperado, vuelva a intentar en unos momentos");
+  }
 }
 
 async function cargarUsuario(fullname, username, email, password) {
