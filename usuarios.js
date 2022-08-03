@@ -14,7 +14,7 @@ const elemRepetirPassword = document.getElementById("input-repetir-password");
 const botonRegistro = document.getElementById("boton-registro");
 
 if (isLogin) {
-  //ocultar coso
+  //ocultar campos de registro de usuario
   elemNombreyapellido.style.display = "none";
   elemEmail.style.display = "none";
   elemRepetirPassword.style.display = "none";
@@ -57,6 +57,7 @@ async function signupHandler(event) {
   }
 }
 
+//fetch para ingreso de usuario
 async function ingresarUsuario(username, password) {
   const response = await fetch(
     "https://parseapi.back4app.com/login?username=" +
@@ -110,6 +111,7 @@ function validarCargarUsuario(
   );
 }
 
+//fetch para registro de usuario
 async function cargarUsuario(fullname, username, email, password) {
   const body = {
     fullname,

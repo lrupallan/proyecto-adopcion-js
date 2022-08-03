@@ -8,6 +8,7 @@ async function cargarHandler(event) {
   return await cargarPerro();
 }
 
+//funcion para cargar nuevo perro a la db
 async function cargarPerro() {
   const nombre = document.getElementById("nombre").value;
   const genero = document.querySelector('input[name="genero"]:checked').value;

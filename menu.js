@@ -4,6 +4,7 @@ async function cerrarSesion() {
   window.location.href = "index.html";
 }
 
+//fetch para guardar favoritos
 async function guardarFavoritos() {
   const perrosFavoritos = JSON.parse(sessionStorage.getItem("favoritos"));
   const body = {
@@ -28,6 +29,7 @@ async function guardarFavoritos() {
 const userInfoString = sessionStorage.getItem("user-info");
 const userInfo = userInfoString ? JSON.parse(userInfoString) : undefined;
 
+//condiciones para display de menu
 if (userInfo) {
   const botonLogin = document.getElementById("boton-login");
   const botonSignup = document.getElementById("boton-signup");
