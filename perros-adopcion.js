@@ -113,7 +113,9 @@ async function filtrarPerros(event) {
         if (!(perro.owner === userInfo.objectId || perro.adoptante)) {
           card += `<button class="adoptar" id= "boton-adoptar-${perro.id}">Adoptar</button>`;
         } else {
-          card += `<p class="owner">Cargaste este perro&#128077;</p>`;
+          if(perro.owner === userInfo.objectId) {
+            card += `<p class="owner">Cargaste este perro&#128077;</p>`;
+          }
         }
       }
       if (perro.adoptante) {
